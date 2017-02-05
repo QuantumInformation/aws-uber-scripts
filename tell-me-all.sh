@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
-. "$DIR/config.sh"
+DIR="${BASH_SOURCE-$PWD}"
+. "$DIR/config.properties"
 
 # ___________________________________ EC2 ______________________________________________
 
